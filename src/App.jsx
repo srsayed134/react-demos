@@ -1,13 +1,10 @@
-import Footer from "./components/01.Challenge/Footer";
-import Header from "./components/01.Challenge/Header";
-import Main from "./components/01.Challenge/Main";
+
+import JSXRules from "./components/03.Challenge/JSXRules";
 
 const App = () => {
     return (
     <div>
-    <Header />
-    <Main />
-    <Footer />
+    <JSXRules/>
     </div>
 
     )
