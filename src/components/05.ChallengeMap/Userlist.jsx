@@ -21,7 +21,7 @@ function Userlist() {
   return (
     <div>
         {users.map(({id, name, age}) => (
-            <ul key={Math.random()}>
+            <ul key={id}>
                 <li>ID: {id}</li>
                 <li>Name: {name}</li>
                 <li>Age: {age}</li>
