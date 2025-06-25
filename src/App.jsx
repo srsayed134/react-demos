@@ -1,14 +1,12 @@
+import Userlist from "./components/05.ChallengeMap/Userlist";
 
-import JSXRules from "./components/03.Challenge/JSXRules";
+function App() {
 
-const App = () => {
-    return (
-    <div>
-    <JSXRules/>
+    return (<div>
+      <Userlist/>
     </div>
-
-    )
+    );
 };
 
-export default App;
+export default App
 
