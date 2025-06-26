@@ -1,14 +1,9 @@
-import ProductList from "./components/05.ChallengeMap/ProductList";
-import Userlist from "./components/05.ChallengeMap/Userlist";
+import React from 'react'
 
 function App() {
-
-    return (<div>
-      <Userlist/>
-      <ProductList/>
-    </div>
-    );
-};
+  return (
+    <div>App</div>
+  )
+}
 
 export default App
-
