@@ -1,10 +1,10 @@
 import React from 'react'
-import StateHookprca1 from './components/Practice/StateHookprca1'
+import ShoppingList from './components/09.ChallengeState/ShoppingList'
 
 function App() {
   return (
     <div>
-      <StateHookprca1/>
+      <ShoppingList/>
     </div>
   )
 }
