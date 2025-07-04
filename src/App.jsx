@@ -1,15 +1,21 @@
-import React from 'react'
-import BasicEffect from './components/10.ChallengeUseEffect/BasicEffect'
-import CounterEffect from './components/10.ChallengeUseEffect/CounterEffect'
-import FetchDataEffect from './components/10.ChallengeUseEffect/FetchDataEffect'
+import { createContext } from 'react'
+import CompA from './components/Practice/PopDriling/CompA'
+export const Data = createContext()
+export const Data1 = createContext()
 
 function App() {
+
+  const name = "Sabbir"
+  const age = 21
+
   return (
-    <div>
-      <BasicEffect/>
-      <CounterEffect/>
-      <FetchDataEffect/>
-    </div>
+    
+    <Data.Provider value={name}>
+      <Data1.Provider value={age}>
+       <CompA/>
+      </Data1.Provider>
+    </Data.Provider>
+
   )
 }
 
