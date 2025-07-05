@@ -1,21 +1,40 @@
-import { createContext } from 'react'
-import CompA from './components/Practice/PopDriling/CompA'
-export const Data = createContext()
-export const Data1 = createContext()
+import React, { useReducer } from 'react'
+
+const initialState = {count: 0};
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return {
+        ...state,
+        count: state.count + 1
+      }
+    case "decrement":
+      return {
+        ...state,
+        count: state.count - 1
+      }
+    case "reset":
+      return {
+        ...state,
+        count: 0
+      }
+    default:
+      return state;
+  }
+}
+
 
 function App() {
 
-  const name = "Sabbir"
-  const age = 21
+  const [state, dispathch] = useReducer(reducer, initialState)
 
   return (
-    
-    <Data.Provider value={name}>
-      <Data1.Provider value={age}>
-       <CompA/>
-      </Data1.Provider>
-    </Data.Provider>
-
+    <div>
+       <button onClick={() => dispathch({type: "increment"})}>+</button>
+       <button onClick={() => dispathch({type: "decrement"})}>-</button>
+       <button onClick={() => dispathch({type: "reset"})}>Reset</button>
+       <h1>Count: {state.count}</h1>
+    </div>
   )
 }
 
